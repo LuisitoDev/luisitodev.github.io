@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/input.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="../js/libs/jquery/jquery-2.1.4.min.js"></script>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="shortcut icon" href="../botones/icon.png">
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AalL6GrPpgIxNDaDkesb_DED8QIEEMftQq_TFWnFh3Ty82OAreooXmMoedzVa2uVx7rBrSuzuxr5YZGV&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+    <script src="../js/PaypalButton.js"></script>
+</head>
+<body>
+
+<!-- <embed src="../sonidos/TitleScreen.mp3" autostarty="true" loop="true" volume="80" width="0" height="0"> -->
+
+  <!-- textos de debug -->
+    <h1 id="textoNombre" class="ocultar"> </h1>
+    <h1 id="textoDificultad" class="ocultar"> </h1>
+    <h1 id="textoEscenario" class="ocultar"> </h1>
+    <!-- textos de debug -->
+
+<!-- <img class="logo" src="../botones/titulo_tanquecitos_en_guerra.png" alt="Logo de isaac"> -->
+
+<img class="logo" src="../botones/tanquecitos.png" alt="Logo de isaac">
+<img class="logoDos" src="../botones/guerra.png" alt="Logo dos">
+
+<img class="blackBack" src="../botones/BLACK_BACKGROUND.png" alt="BB">
+
+<button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="prueba empezar" id="open-modal"> </button> <!--  boton 1 -->
+<button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="prueba ajustes" id="open-modal2"> </button> <!--  boton 2 -->        
+<button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="prueba records" id="open-modal3"> </button> <!--  boton 3 -->
+<button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="prueba tienda" id="open-modal285"> </button> <!--  boton 70 -->
+
+
+<!-- BOTONES DE PERFILES -->
+<button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="registro" id="open-modal282"> </button> <!--  boton 71 -->
+<button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="inicio" id="open-modal283"> </button> <!--  boton 282 -->
+<button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" onclick="cerrarSesionUsuario()" class="cerrar" id="open-modal284"> </button> <!--  boton 283 -->
+
+<!-- TEXTO DE USUARIO -->
+<div class="letraUsuario" id="titulo-bienvenida" hidden></div>
+
+
+  <!-- MODAL DE TIENDA -->
+  <section class="modal container">
+    <div class="modal__container" id="modal-container285">
+        <div class="modal__content modal__tienda">
+            <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()"  id="modal-container-tienda-close">
+                <i>X</i>
+            </div>
+            <h1 class="modal__title">Selecciona un producto:</h1>                
+            
+            
+            <div class="tablaSkins skinsParaComprar">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- MODAL DE METODO DE PAGO -->
+<section class="modal container">
+    <div class="modal__container" id="modal-container69">
+        <div class="modal__content modal__paypal">
+            <div class="modal__close close-modal" title="Close">
+                <i>X</i>
+            </div>
+            <h1 class="modal__title">Selecciona un metodo de pago:</h1>
+            <div id="paypal-button-container">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL DE INICIO DE SESIÓN -->
+<section class="modal container">
+    <div class="modal__container" id="modal-container283">
+        <div class="modal__content modal__inicio">
+            <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()"  id="modal-container-inicio-close">
+                <i>X</i>
+            </div>
+            <h1 class="modal__title">Inicia sesión</h1>                
+
+
+
+            <p class="textoPerfil" >Ingresa tu correo electronico:</p>
+            <div class="nickname">
+                <input type="text" id="id_inicio_sesion_correo" style="color:white" required autofocus placeholder="Correo electronico" >
+                <!-- <button onmouseenter="sonido.play()" onmousedown="sonido2.play()" type="submit" id="modal-send-score" class="subirNick"> Subir </button> -->
+            </div> 
+            <p class="textoAviso ocultar">Tu puntuación se ha registrado</p>
+            
+            <p class="textoPerfil" >Ingresa tu contraseña:</p>
+            <div class="nickname" style="margin-bottom: 2%">
+                <input type="password" id="id_inicio_sesion_password" style="color:white" required autofocus placeholder="Contraseña" >
+            </div> 
+            
+            <button onmouseenter="sonido.play()" onclick="inicioSesionUsuario()" onmousedown="sonido2.play()" type="submit"
+            class="subirPerfil"> Aceptar </button> 
+        </div>
+    </div>
+</section>
+
+
+ <!-- MODAL DE REGISTRO -->
+ <section class="modal container">
+    <div class="modal__container" id="modal-container282">
+        <div class="modal__content modal__registro">
+        <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()"  id="modal-container-registro-close">
+                <i>X</i>
+            </div>
+            <h1 class="modal__title">Registre su usuario</h1>                
+
+
+
+        <p class="textoPerfil" >Ingresa un nombre de usuario:</p>
+        <div class="nickname">
+            <input type="text" id="id_registro_nombre_usuario" name="NombreUsuario" style="color:white" required autofocus placeholder="Nombre de usuario" >
+            <!-- <button onmouseenter="sonido.play()" onmousedown="sonido2.play()" type="submit" id="modal-send-score" class="subirNick"> Subir </button> -->
+        </div> 
+
+        <p class="textoPerfil" >Ingresa un correo electronico:</p>
+        <div class="nickname" style="margin-bottom: 2%">
+            <input type="text" id="id_registro_correo" name="Correo" style="color:white" required autofocus placeholder="Correo electronico" >
+        </div> 
+        
+        <p class="textoPerfil" >Ingresa una contraseña:</p>
+        <div class="nickname" style="margin-bottom: 2%">
+            <input type="password" id="id_registro_password" name="Password" style="color:white" required autofocus placeholder="Contraseña" >
+        </div> 
+        
+        <button onmouseenter="sonido.play()" onclick="registroUsuario()" onmousedown="sonido2.play()" type="submit"
+        class="subirPerfil"> Aceptar </button> 
+
+    </div>
+    </div>
+</section>
+
+<!-- MODAL DE ADVERTENCIA -->
+<section class="modal container">
+    <div class="modal__container" id="modal-container70">
+        <div class="modal__content modal__advertencia">
+        <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()"  id="modal-container-advertencia-close">
+                <i>X</i>
+            </div>
+            <h1 class="modal__title">No puedes ingresar a la tienda sin haber iniciado sesión</h1>                
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="modal container">
+    <div class="modal__container" id="modal-container">
+        <div class="modal__content modal__empezar">
+            <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()">
+                <i>X</i>
+            </div>
+
+            <!-- <img src="../assets/img/star-trophy.png" alt="" class="modal__img"> -->
+
+            <h1 class="modal__title">Seleccione un modo de juego</h1>
+            <!-- <p class="modal__description">Click the button to close</p> -->
+            
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="pruebaModal solo" id="open-modal287" onclick="unJugador();"> </button> <!--  boton 1 -->
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="pruebaModal multi" id="open-modal288" onclick="dosJugadores(); dificultadNula();"> </button> <!--  boton 2 -->    
+
+        </div>
+    </div>
+</section>
+
+
+<!-- MODAL DE SELECCION DE SKINS 1 JUGADOR -->
+<section class="modal container">
+    <div class="modal__container" id="modal-container287">
+        <div class="modal__content modal__skins">
+            <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()"  id="modal-container-skins-close">
+                <i>X</i>
+            </div>
+            <h1 class="modal__title">Seleccione un traje:</h1>                
+            <div class="tablaSkins skinsCompradasPlayer1">
+            </div>
+
+            <button onmouseenter="sonido.play()" onmousedown="sonido2.play()"  id="open-modal6" type="submit"
+            class="aceptarSkin"> Aceptar </button> 
+
+        </div>
+    </div>
+</section>
+
+<!-- MODAL DE SELECCION DE SKINS 2 JUGADORES -->
+<section class="modal container">
+    <div class="modal__container" id="modal-container288">
+        <div class="modal__content modal__skins">
+            <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()"  id="modal-container-skins-close">
+                <i>X</i>
+            </div>
+
+            <div class="todoIzq">
+            <h1 class="modal__title">Seleccione un traje para jugador 1:</h1>                
+            <div class="tablaSkinsMulti skinsCompradasPlayer1">
+            </div>
+            </div>
+
+            <div class="todoDer">
+            <h1 class="modal__title">Seleccione un traje para jugador 2:</h1>                
+            <div class="tablaSkinsMulti skinsCompradasPlayer2">
+            </div>
+            </div>
+
+
+            <button onmouseenter="sonido.play()" onmousedown="sonido2.play()"  id="open-modal73" type="submit"
+            class="aceptarSkin"> Aceptar </button> 
+
+        </div>
+    </div>
+</section>
+
+
+<section class="modal container">
+    <div class="modal__container" id="modal-container2">
+        <div class="modal__content modal__ajustes">
+          <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()">
+        <i onmousedown="sonido3.play()" id="modal-container-sound-close">X</i>
+            </div>
+
+            <!-- <h1 class="modal__title">Ver configuración</h1> -->
+
+            <h1 class="modal__description">Ajusta el volumen</h1>
+            <button onmouseenter="sonido.play()" onmousedown="sonido2.play()" class="audioIcons audio0" id="volumen0" onclick="cambiar0()"> </button>
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="audioIcons audio1" id="volumen1" onclick="cambiar1()"> </button> <!--  boton 1 -->
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="audioIcons audio2"  id="volumen2" onclick="cambiar2()"> </button> <!--  boton 1 -->
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="audioIcons audio3"  id="volumen3" onclick="cambiar3()"> </button> <!--  boton 1 -->
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="audioIcons audio4"  id="volumen4" onclick="cambiar4()"> </button> <!--  boton 1 -->
+
+            <!-- <h1 class="modal__description">Brillo</h1>
+            <button onmouseenter="sonido.play()" onmousedown="sonido2.play()" class="audioIcons audio0" id="brillo0" onclick="opacidad0()"> </button>
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="audioIcons audio1" id="brillo1" onclick="opacidad1()"> </button> 
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="audioIcons audio2"  id="brillo2" onclick="opacidad2()"> </button> 
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="audioIcons audio3"  id="brillo3" onclick="opacidad3()"> </button> 
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="audioIcons audio4"  id="brillo4" onclick="opacidad4()"> </button> 
+ -->
+        </div>
+    </div>
+</section>
+
+<section class="modal container">
+    <div class="modal__container" id="modal-container_score">
+        <div class="modal__content modal__records">
+          <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()">
+            <i>X</i>
+            </div>
+
+
+            <h1 class="dificultadFix">Dificultad fácil:</h1> <br>
+            <div class="recordsTitulos">
+              <p class="rango">Rango</p>
+              <p class="usuario">Usuario</p>
+              <p class="puntos">Puntos</p>
+            </div>
+            <div class="tablaRec" id="tabla_score_easy_mode">
+         
+            
+            </div>
+
+        <h1 class="dificultadFix">Dificultad difícil:</h1> <br>
+        <div class="recordsTitulos2">
+          <p class="rango">Rango</p>
+          <p class="usuario">Usuario</p>
+          <p class="puntos">Puntos</p>
+        </div>
+        <div class="tablaRec" id="tabla_score_hard_mode">
+         
+        </div>
+    </div>
+</section>
+
+
+
+<section class="modal container">
+    <div class="modal__container" id="modal-container6">
+        <div class="modal__content modal__modo">
+          <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()">
+            <i>X</i>
+            </div>
+
+           <!-- <img src="../assets/img/star-trophy.png" alt="" class="modal__img"> -->
+
+           <h1 class="modal__title">Seleccione una dificultad:</h1>
+           <!-- <p class="modal__description">Click the button to close</p> -->
+           
+           <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="pruebaModal facil" id="open-modal7" onclick="dificultadFacil();"> </button> <!--  boton 1 -->
+           <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="pruebaModal dificil" id="open-modal72"  onclick="dificultadDificil();"> </button> <!--  boton 2 -->    
+
+        </div>
+    </div>
+</section>
+
+<section class="modal container">
+    <div class="modal__container" id="modal-container7">
+        <div class="modal__content modal__escenario">
+          <div class="modal__close close-modal" title="Close" onmousedown="sonido3.play()">
+            <i>X</i>
+            </div>
+            <!-- <img src="../assets/img/star-trophy.png" alt="" class="modal__img"> -->
+
+            <h1 class="modal__title">Seleccione un escenario:</h1>
+            <!-- <p class="modal__description">Click the button to close</p> -->
+            
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="pruebaModal ciudad"  onclick="escenarioCiudad(); location.href='../Game/'"></button> <!--  boton 1 -->
+            <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="pruebaModal granja" onclick="escenarioGranja(); location.href='../Game/'"  > </button> <!--  boton 2 -->    
+            <!-- <button onmouseenter="sonido.play()"  onmousedown="sonido2.play()" class="pruebaModal juguetes" onclick="escenarioJuguetes(); location.href='../Game/'" > </button> < !-- boton 3 -->   
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- <img class="imagen" src="../https://bit.ly/3BF9FD7" /> -->
+        <script src="../js/sonidos.js"></script>
+        <script src="../assets/js/main.js"></script>
+</body>
+</html>

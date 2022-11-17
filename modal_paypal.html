@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AalL6GrPpgIxNDaDkesb_DED8QIEEMftQq_TFWnFh3Ty82OAreooXmMoedzVa2uVx7rBrSuzuxr5YZGV&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+    <script src="js/PaypalButton.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="modal container">
+        <div class="modal__container" id="modal-container">
+            <div class="modal__content modal__paypal">
+                <div class="modal__close close-modal" title="Close">
+                    <i>X</i>
+                </div>
+                <div id="paypal-button-container">
+                    <button onclick="setPrecio(100);"> </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

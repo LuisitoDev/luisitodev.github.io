@@ -1,0 +1,345 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --hue: 240;
+  --first-color: hsl(var(--hue), 16%, 18%);
+  --first-color-alt: hsl(var(--hue), 16%, 12%);
+  --title-color: hsl(var(--hue), 8%, 15%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+
+  /*========== z index ==========*/
+  --z-modal: 1000;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 1.75rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+button{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== MODAL ===============*/
+.container{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.modal{
+  height: 1vh;
+  display: grid;
+  place-items: center;
+}
+
+.modal__button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.modal__button:hover{
+  background-color: var(--first-color-alt);
+}
+
+.modal__container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(var(--hue), 18%, 75%, .8);  /*COLOR DEL FONDO, COMO DE BLUR */
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: all .3s;
+  z-index: var(--z-modal);
+  visibility: hidden;
+  opacity: 0;
+
+  /*=== Effect 3 ===*/
+  /* perspective: 1000px; */
+}
+
+.modal__content{
+  position: relative;
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem 1rem 0 0;
+  transition: all .3s;
+  transform: translateY(10%);
+}
+/* COLORES DEL FONDO DE CADA MODAL PERSONALIZADOS */
+.modal__empezar{
+  background-color: rgb(40, 66, 180);
+  transform: scale(2);
+   background:url(../../botones/modalEmpezar.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+
+.modal__advertencia{
+  background-color: rgb(40, 66, 180);
+  transform: scale(2);
+   background:url(../../botones/modalAdvertencia.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__tienda{
+  background-color: rgb(40, 66, 180);
+  transform: scale(2);
+   background:url(../../botones/modalTienda.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__paypal{
+  background-color: rgb(40, 66, 180);
+  transform: scale(2);
+   background:url(../../botones/modalTienda.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__skins{
+  background-color: rgb(40, 66, 180);
+  transform: scale(2);
+   background:url(../../botones/modalSkins.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__registro{
+  background-color: rgb(40, 66, 180);
+  transform: scale(2);
+   background:url(../../botones/modalRegistro.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__inicio{
+  background-color: rgb(40, 66, 180);
+  transform: scale(2);
+   background:url(../../botones/modalLogin.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__modo{
+  background-color: rgb(212, 94, 149);
+  transform: scale(2);
+  background:url(../../botones/modalDificultad.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__escenario{
+  background-color: rgb(86, 54, 128);
+  transform: scale(2);
+  background:url(../../botones/modalEscenarios.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__ajustes{
+  background-color: rgb(124, 118, 113);
+  transform: scale(2);
+  background:url(../../botones/modalAjustes.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__records{
+  top:2%;
+  background-color: rgb(226, 149, 34);
+  height: 80%;
+  transform: scale(2);
+  background:url(../../botones/modalRecords.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__pausa{
+  background-color: rgb(51, 51, 51);
+  background:url(../../botones/modalPausa.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__ganar{
+  background-color: rgb(231, 123, 52);
+  background:url(../../botones/modal1jugador.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__internet{
+  background-color: rgb(52, 115, 231);
+  background:url(../../botones/modalInternet.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__perder{
+  background-color: rgb(221, 97, 97);
+  background:url(../../botones/modal2jugadores.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__controles{
+  background-color: rgb(102, 90, 90);
+  height:65%;
+  width:100%;
+  transform: scale(2);
+  background:url(../../botones/modalControles.png) no-repeat;
+  background-size:cover;
+background-position: center center;
+background-attachment: fixed; 
+}
+
+.modal__img{
+  width: 150px;
+  margin-bottom: .75rem;
+}
+
+.modal__close{
+  display: inline-flex;
+  background-color: var(--first-color);
+  border-radius: .25rem;
+  padding-right: 2%;
+  padding-left: 2%;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.modal__title{
+  font-size: var(--big-font-size);
+  color: white;
+  font-weight: 500;
+  padding-top:3%;
+}
+
+.textoPerfil{
+  font-size: var(--medium-font-size);
+  color: white;
+  font-weight: 500;
+  padding-top:2%;
+  text-align: left;
+
+}
+
+.dificultadFix{
+  font-size: var(--big-font-size);
+  color: white;
+  font-weight: 500;
+  padding-top:3%;
+  height: 4vh;
+  place-items: center;
+}
+
+
+.modal__description{
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.modal__button-width{
+  width: 90%;
+}
+
+.modal__button-link{
+  display: block;
+  margin: 1rem auto 0;
+  background-color: transparent;
+  color: var(--first-color);
+  font-weight: 500;
+}
+
+/* Show modal */
+.show-modal{
+  visibility: visible;
+  opacity: 1;
+}
+
+.show-modal .modal__content{
+  /*=== Effect 1 ===*/
+  transform: translateY(0);
+
+  /*=== Effect 2 ===*/
+  /* transform: scale(1) translateY(0); */
+
+  /*=== Effect 3 ===*/
+  /* transform: rotateX(0) scale(1) translateY(0); */
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (min-width: 576px){
+  .modal__content{
+    margin: auto;
+    width: 380px;
+    border-radius: 1.25rem;
+  }
+
+  .modal__img{
+    width: 170px;
+  }
+}

@@ -1,0 +1,184 @@
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert2SG
+illum 4
+Kd 0.07 0.09 0.50
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd tanque_tanquecito_lambert4SG_Base_color.png
+Ni 1.00
+newmtl lambert4SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd tanque_tanquecito_lambert7SG_Base_color.png
+Ni 1.00
+newmtl lambert5SG
+illum 4
+Kd 0.50 0.39 0.50
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert7SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd Miratexturacuerpo.png
+Ni 1.00
+newmtl lambert8SG
+illum 4
+Kd 0.73 0.22 0.22
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl rey:lambert2SG
+illum 4
+Kd 0.93 0.81 0.44
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl rey:lambert3SG
+illum 4
+Kd 0.65 0.45 0.71
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert1SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd calatanquesombrero.png
+Ni 1.00
+newmtl tanquecito:lambert2SG
+illum 4
+Kd 0.33 0.50 0.20
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert3SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd Miratexturariel.png
+Ni 1.00
+newmtl tanquecito:lambert4SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd Miratexturallanta.png
+Ni 1.00
+newmtl tanquecito:lambert5SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd Miratextura.png
+Ni 1.00
+newmtl tanquecito:lambert6SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd calatanquecuerpo.png
+Ni 1.00
+newmtl tanquecito:lambert7SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd calatanqueriel.png
+Ni 1.00
+newmtl tanquecito:lambert8SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd calaballanta.png
+Ni 1.00
+newmtl tanquecito:lambert9SG
+illum 4
+Kd 1.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert10SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert11SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert12SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert13SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert14SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert15SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert16SG
+illum 4
+Kd 0.04 0.01 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert17SG
+illum 4
+Kd 0.67 0.30 0.51
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert18SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert20SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl tanquecito:lambert21SG
+illum 4
+Kd 0.08 0.05 0.03
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00

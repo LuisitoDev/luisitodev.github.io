@@ -1,0 +1,112 @@
+
+    .textoAviso{
+        margin-top:5%;
+        color:white;
+        font-size: large;
+        font-weight: 500;
+    }
+
+    .nickname{
+    margin-top:20px;
+    width:10%;
+    height:10%;
+    position:relative;
+    
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:30%;
+    background-color:#2f373f;
+    }
+    .nickname input{
+    width:100%;
+    height:100%;
+    background:transparent;
+    border: none;
+    border-radius:1px;
+    outline:none;
+    padding: 0 10px;
+    font-size: 20px;
+    }
+    .nickname label{
+    position:absolute;
+    top:2%;
+    left: 1%;
+    color:white;
+    text-transform:capitalize;
+    font-size:18px;
+    transition:top .3s;
+    padding: 0 5px;
+    }
+    
+    .nickname input:focus ~ label {
+    top: -85%;
+    background-color: none;
+    }
+
+    .subirNick{
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        height:100%;
+        background:#4257cf;
+        color:white;
+        padding:0 2px;
+        padding-left:2%;
+        padding-right:2%;
+        letter-spacing: 1.2px;
+        border:none;
+        cursor:pointer;
+        }
+        .subirNick:hover{
+            transition:.3s;
+            background-color:rgb(81, 47, 160);
+        }
+
+
+        
+    .subirPerfil{
+        position:fixed;
+        right:0;
+        height:10%;
+        bottom:0;
+        width: 100%;
+        background:#4257cf;
+        color:white;
+        padding:0 2px;
+
+        letter-spacing: 2px;
+        cursor:pointer;
+        }
+        .subirPerfil:hover{
+            transition:.3s;
+            background-color:rgb(88, 61, 149);
+        }
+    
+
+             
+    .aceptarSkin{
+        position:fixed;
+        right:0;
+        height:5%;
+        bottom:0;
+        width: 100%;
+        background:#4257cf;
+        color:white;
+        padding:0 2px;
+
+        letter-spacing: 2px;
+        cursor:pointer;
+        }
+        .aceptarSkin:hover{
+            transition:.3s;
+            background-color:rgb(88, 61, 149);
+        }
+
+
+    

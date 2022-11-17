@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAMEPLAY</title>
+  <link href="../css/game.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../css/input.css">
+  <script src="../js/libs/jquery/jquery-2.1.4.min.js"></script>
+  <link rel="shortcut icon" href="../botones/icon.png">
+</head>
+
+
+<body>
+
+  <div style="display: flex; justify-content: center;  align-items: center; height: 100vh;">
+    <div id="scene-section" style="width: 50%; height: 92vh;">
+    </div>
+  </div>
+
+  <img class="blackSquare" src="../botones/blackSquare.png" alt="Time">
+  <img class="blackBack" src="../botones/BLACK_BACKGROUND_LOADING.png" alt="Time">
+
+  <img class="blackBackOpacity ocultar" src="../botones/BLACK_BACKGROUND_0.png" alt="BB5" id="opacidad5">
+  <img class="blackBackOpacity ocultar" src="../botones/BLACK_BACKGROUND_1.png" alt="BB5" id="opacidad4">
+  <img class="blackBackOpacity ocultar" src="../botones/BLACK_BACKGROUND_2.png" alt="BB5" id="opacidad3">
+  <img class="blackBackOpacity ocultar" src="../botones/BLACK_BACKGROUND_3.png" alt="BB5" id="opacidad2">
+
+  <div class="containerTextoPausa">
+    <div class="textoPausa" > Presiona P para pausar el juego</div>
+  </div>
+
+  <div class="containerLife">
+    <img class="life" src="../botones/life.png" alt="Life1">
+    <div class="lifeNumber" id="IdLivesPlayer1">-1</div>
+  </div>
+
+  <div class="containerLife2" id="corazon2">
+    <img class="life" src="../botones/life2.png" alt="Life2">
+    <div class="lifeNumber" id="IdLivesPlayer2">-1</div>
+  </div>
+
+  <div class="containerTime" id="reloj">
+    <img class="time" src="../botones/time.png" alt="Time">
+    <div class="timeNumber" id="IdTimeRemaining">100</div>
+  </div>
+
+  <div class="containerEnemy" id="contadorEnemigos">
+    <img class="enemy" src="../botones/deathcounter.png" alt="Counter">
+    <div class="enemyNumber" id="IdLabelKills">0</div>
+  </div>
+
+
+  <!-- items jugador 1 -->
+   <div class="containerItem1 ocultar" id="powerUpDañoPlayer1">
+    <img class="item" src="../botones/itemsBala.png" alt="Logo de isaac">
+  </div> 
+  <div class="containerItem1 ocultar" id="powerUpEscudoPlayer1">
+    <img class="item" src="../botones/itemsEscudo.png" alt="Logo de isaac">
+  </div> 
+  <div class="containerItem1 ocultar" id="powerUpVelocidadPlayer1">
+    <img class="item" src="../botones/itemsVelocidad.png" alt="Logo de isaac">
+  </div> 
+
+  <!-- items jugador 2 -->
+  <div class="containerItem2 ocultar" id="powerUpDañoPlayer2">
+    <img class="item" src="../botones/itemsBala.png" alt="Logo de isaac">
+  </div> 
+  <div class="containerItem2 ocultar" id="powerUpEscudoPlayer2">
+    <img class="item" src="../botones/itemsEscudo.png" alt="Logo de isaac">
+  </div> 
+  <div class="containerItem2 ocultar" id="powerUpVelocidadPlayer2">
+    <img class="item" src="../botones/itemsVelocidad.png" alt="Logo de isaac">
+  </div> 
+
+  <section class="modal container" id="container-pause">
+  </section>
+
+  <section class="modal container" id="container-sound">
+  </section>
+
+  <section class="modal container" id="container-controls">
+  </section>
+
+  <section class="modal container" id="container-win">
+  </section>
+
+  <section class="modal container" id="container-lose">
+  </section>
+
+  <section class="modal container" id="container-score">
+  </section>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/sonidos.js"></script>
+  <script type="module" src="../js/game.js"></script>
+
+</body>
+
+</html>

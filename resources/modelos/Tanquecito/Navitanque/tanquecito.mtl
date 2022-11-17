@@ -1,0 +1,53 @@
+newmtl navitanque:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl navitanque:lambert9SG
+illum 4
+Kd 1.00 0.00 0.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl navitanque:lambert10SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl navitanque:lambert11SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd tanquecito_lambert11SG_Base_color.png
+Ni 1.00
+newmtl navitanque:lambert12SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd NaviTanquecuerpo.png
+Ni 1.00
+newmtl navitanque:lambert13SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd tanquecito_lambert3SG_Base_color.png
+Ni 1.00
+newmtl navitanque:lambert14SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd NaviTanquellanta.png
+Ni 1.00
+newmtl navitanque:lambert15SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.80 0.80 0.80
+Tf 1.00 1.00 1.00
+map_Kd NaviTanquenariz.png
+Ni 1.00
